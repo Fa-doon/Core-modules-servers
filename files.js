@@ -70,6 +70,15 @@ fs.readFile(renamedFile, "utf8", (err) => {
   console.log(`File read successfully!`);
 });
 
+//Delete Fadoon_T.js
+fs.rm("./Fadoon_T.js", (err) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log("File has been deleted successfully");
+});
+
 //Delete the 'Names' directory
 fs.rmdir("./Names", { recursive: true }, (err) => {
   if (err) {
